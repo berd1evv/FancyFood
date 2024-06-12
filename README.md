@@ -3,17 +3,17 @@
 The project is a mobile application for ordering food from restaurants.
 
 # Screenshots
-<img src="GreenFootprint/Screenshots/1.png" alt="drawing" style="width:200px;"/>
+<img src="FancyFood/screenshots/1.png" alt="drawing" style="width:200px;"/>
 
-<img src="GreenFootprint/Screenshots/2.png" alt="drawing" style="width:200px;"/>
+<img src="FancyFood/screenshots/2.png" alt="drawing" style="width:200px;"/>
 
-<img src="GreenFootprint/Screenshots/3.png" alt="drawing" style="width:200px;"/>
+<img src="FancyFood/screenshots/3.png" alt="drawing" style="width:200px;"/>
 
-<img src="GreenFootprint/Screenshots/4.png" alt="drawing" style="width:200px;"/>
+<img src="FancyFood/screenshots/4.png" alt="drawing" style="width:200px;"/>
 
-<img src="GreenFootprint/Screenshots/5.png" alt="drawing" style="width:200px;"/>
+<img src="FancyFood/screenshots/5.png" alt="drawing" style="width:200px;"/>
 
-<img src="GreenFootprint/Screenshots/6.png" alt="drawing" style="width:200px;"/>
+<img src="FancyFood/screenshots/6.png" alt="drawing" style="width:200px;"/>
 
 # Video description
 
