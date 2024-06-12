@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ItemView: View {
+    var product: Meal
     @State private var count: Int = 0
     
     var body: some View {
@@ -18,15 +19,15 @@ struct ItemView: View {
             
             
             VStack(alignment: .leading) {
-                Text("Item")
+                Text(product.name)
                     .font(.title2)
                 Text("Item description")
             }
             
-            Spacer()
+//            Spacer()
             
             VStack(alignment: .trailing) {
-                Text("120 KGS")
+                Text("\(product.price) KGS")
                     .font(.title2)
                 Spacer()
                 
@@ -39,5 +40,5 @@ struct ItemView: View {
 }
 
 #Preview {
-    ItemView()
+    ItemView(product: .init())
 }

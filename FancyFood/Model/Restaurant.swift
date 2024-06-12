@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import FirebaseFirestoreSwift
 
 class Restaurant: Codable, Identifiable {
-    let id: Int
+    @DocumentID var id: String?
     let name: String
     let description: String
     let logo: String
@@ -16,8 +17,7 @@ class Restaurant: Codable, Identifiable {
     let reviews: Int
     let rating: Int
     
-    init(id: Int, name: String, description: String, logo: String, background: String, reviews: Int, rating: Int) {
-        self.id = id
+    init(name: String, description: String, logo: String, background: String, reviews: Int, rating: Int) {
         self.name = name
         self.description = description
         self.logo = logo
@@ -27,7 +27,6 @@ class Restaurant: Codable, Identifiable {
     }
     
     init() {
-        self.id = 0
         self.name = "name"
         self.description = "description"
         self.logo = "logo"

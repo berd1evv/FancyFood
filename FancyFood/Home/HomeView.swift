@@ -19,17 +19,31 @@ struct HomeView: View {
     @State private var path = NavigationPath()
     @State private var selectedRestaurant: Restaurant = Restaurant()
     @StateObject var viewModel: HomeViewModel = HomeViewModel()
+    @State private var searchText = ""
     
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(viewModel.restaurants, id: \.id) { item in
-                    RestaurantItemView(restaurant: item)
-                        .onTapGesture {
-                            selectedRestaurant = item
-                            showRestaurant = true
+            VStack {
+                TextField("Search restaurants", text: $searchText)
+                    .padding()
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                
+                
+                List {
+                    if !filteredRestaurants.isEmpty {
+                        ForEach(filteredRestaurants, id: \.id) { item in
+                            RestaurantItemView(restaurant: item)
+                                .onTapGesture {
+                                    selectedRestaurant = item
+                                    showRestaurant = true
+                                }
                         }
+                    } else {
+                        Text("No restaurants found")
+                    }
                 }
+                
+                
             }
             .navigationTitle("Restaurants")
             .navigationBarTitleDisplayMode(.large)
@@ -42,6 +56,14 @@ struct HomeView: View {
         }
         
     }
+    
+    var filteredRestaurants: [Restaurant] {
+           if searchText.isEmpty {
+               return viewModel.restaurants
+           } else {
+               return viewModel.restaurants.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
+           }
+       }
 }
 
 #Preview {

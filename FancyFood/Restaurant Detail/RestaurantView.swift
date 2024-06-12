@@ -9,9 +9,12 @@ import SwiftUI
 import Kingfisher
 
 struct RestaurantView: View {
+    
     @Binding var restaurant: Restaurant
     @State private var isFavorite: Bool = false
     @State private var showFoodOrdering: Bool = false
+    @Environment(\.presentationMode) var presentationMode
+    @StateObject var viewModel: RestaurantViewModel = RestaurantViewModel()
     
     var body: some View {
         ScrollView {
@@ -93,8 +96,26 @@ struct RestaurantView: View {
         }
         .ignoresSafeArea(.all, edges: .top)
         .scrollIndicators(.hidden)
+        .navigationBarBackButtonHidden(true) // Hide the default back button
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button(action: {
+                    presentationMode.wrappedValue.dismiss() // Custom back button action
+                }) {
+                    HStack {
+                        Image(systemName: "chevron.left")
+                            .foregroundColor(.black)
+                        Text("") // Empty text to remove back button text
+                    }
+                }
+            }
+        }
+        .onAppear {
+            viewModel.getCategories(id: restaurant.id ?? "")
+        }
         .navigationDestination(isPresented: $showFoodOrdering) {
             FoodOrderingView()
+                .environmentObject(viewModel)
         }
         
     }

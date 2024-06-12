@@ -25,6 +25,10 @@
 		A98B71672C19838800AC15FE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98B71662C19838800AC15FE /* HomeViewModel.swift */; };
 		A98B71692C1983A100AC15FE /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98B71682C1983A100AC15FE /* Restaurant.swift */; };
 		A98B716C2C1986EE00AC15FE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A98B716B2C1986EE00AC15FE /* Kingfisher */; };
+		A98B716E2C198B2900AC15FE /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98B716D2C198B2900AC15FE /* CartViewModel.swift */; };
+		A98B71702C198FD500AC15FE /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98B716F2C198FD500AC15FE /* Category.swift */; };
+		A98B71722C19900F00AC15FE /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98B71712C19900F00AC15FE /* Meal.swift */; };
+		A98B71742C19912800AC15FE /* RestaurantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98B71732C19912800AC15FE /* RestaurantViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,10 @@
 		A98B71632C19815C00AC15FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A98B71662C19838800AC15FE /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A98B71682C1983A100AC15FE /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		A98B716D2C198B2900AC15FE /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
+		A98B716F2C198FD500AC15FE /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		A98B71712C19900F00AC15FE /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		A98B71732C19912800AC15FE /* RestaurantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +125,7 @@
 				A98B714C2C196E9500AC15FE /* RestaurantView.swift */,
 				A98B714E2C196F3900AC15FE /* ItemView.swift */,
 				A98B71502C19728800AC15FE /* FoodOrderingView.swift */,
+				A98B71732C19912800AC15FE /* RestaurantViewModel.swift */,
 			);
 			path = "Restaurant Detail";
 			sourceTree = "<group>";
@@ -126,6 +135,7 @@
 			children = (
 				A98B71532C1979A800AC15FE /* CartView.swift */,
 				A98B71552C1979B100AC15FE /* CartItem.swift */,
+				A98B716D2C198B2900AC15FE /* CartViewModel.swift */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -142,6 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				A98B71682C1983A100AC15FE /* Restaurant.swift */,
+				A98B716F2C198FD500AC15FE /* Category.swift */,
+				A98B71712C19900F00AC15FE /* Meal.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -229,15 +241,19 @@
 				A98B71512C19728800AC15FE /* FoodOrderingView.swift in Sources */,
 				A98B71672C19838800AC15FE /* HomeViewModel.swift in Sources */,
 				A98B71542C1979A800AC15FE /* CartView.swift in Sources */,
+				A98B716E2C198B2900AC15FE /* CartViewModel.swift in Sources */,
 				A98B71562C1979B100AC15FE /* CartItem.swift in Sources */,
 				A98B713D2C19670000AC15FE /* HomeView.swift in Sources */,
 				A98B715B2C197F7900AC15FE /* StepperView.swift in Sources */,
 				A98B714A2C196C3600AC15FE /* RestaurantItemView.swift in Sources */,
 				A98B713B2C19670000AC15FE /* FancyFoodApp.swift in Sources */,
+				A98B71742C19912800AC15FE /* RestaurantViewModel.swift in Sources */,
 				A98B71692C1983A100AC15FE /* Restaurant.swift in Sources */,
+				A98B71722C19900F00AC15FE /* Meal.swift in Sources */,
 				A98B714F2C196F3900AC15FE /* ItemView.swift in Sources */,
 				A98B71622C19813400AC15FE /* AppDelegate.swift in Sources */,
 				A98B714D2C196E9500AC15FE /* RestaurantView.swift in Sources */,
+				A98B71702C198FD500AC15FE /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

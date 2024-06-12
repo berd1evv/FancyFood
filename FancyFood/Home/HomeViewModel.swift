@@ -23,7 +23,6 @@ class HomeViewModel: ObservableObject {
                 self.restaurants = querySnapshot?.documents.compactMap({
                     try? $0.data(as: Restaurant.self)
                 }) ?? []
-                print(self.restaurants)
             }
         }
     }
