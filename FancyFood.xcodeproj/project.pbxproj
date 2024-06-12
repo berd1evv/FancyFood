@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A98B713B2C19670000AC15FE /* FancyFoodApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98B713A2C19670000AC15FE /* FancyFoodApp.swift */; };
+		A98B713D2C19670000AC15FE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98B713C2C19670000AC15FE /* HomeView.swift */; };
+		A98B713F2C19670100AC15FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98B713E2C19670100AC15FE /* Assets.xcassets */; };
+		A98B71422C19670100AC15FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98B71412C19670100AC15FE /* Preview Assets.xcassets */; };
+		A98B714A2C196C3600AC15FE /* RestaurantItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98B71492C196C3600AC15FE /* RestaurantItemView.swift */; };
+		A98B714D2C196E9500AC15FE /* RestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98B714C2C196E9500AC15FE /* RestaurantView.swift */; };
+		A98B714F2C196F3900AC15FE /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98B714E2C196F3900AC15FE /* ItemView.swift */; };
+		A98B71512C19728800AC15FE /* FoodOrderingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98B71502C19728800AC15FE /* FoodOrderingView.swift */; };
+		A98B71542C1979A800AC15FE /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98B71532C1979A800AC15FE /* CartView.swift */; };
+		A98B71562C1979B100AC15FE /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98B71552C1979B100AC15FE /* CartItem.swift */; };
+		A98B715B2C197F7900AC15FE /* StepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98B715A2C197F7900AC15FE /* StepperView.swift */; };
+		A98B715E2C19811000AC15FE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A98B715D2C19811000AC15FE /* FirebaseFirestore */; };
+		A98B71602C19811000AC15FE /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A98B715F2C19811000AC15FE /* FirebaseFirestoreSwift */; };
+		A98B71622C19813400AC15FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98B71612C19813400AC15FE /* AppDelegate.swift */; };
+		A98B71642C19815D00AC15FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A98B71632C19815C00AC15FE /* GoogleService-Info.plist */; };
+		A98B71672C19838800AC15FE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98B71662C19838800AC15FE /* HomeViewModel.swift */; };
+		A98B71692C1983A100AC15FE /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98B71682C1983A100AC15FE /* Restaurant.swift */; };
+		A98B716C2C1986EE00AC15FE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A98B716B2C1986EE00AC15FE /* Kingfisher */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A98B71372C19670000AC15FE /* FancyFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FancyFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A98B713A2C19670000AC15FE /* FancyFoodApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyFoodApp.swift; sourceTree = "<group>"; };
+		A98B713C2C19670000AC15FE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A98B713E2C19670100AC15FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A98B71412C19670100AC15FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A98B71492C196C3600AC15FE /* RestaurantItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantItemView.swift; sourceTree = "<group>"; };
+		A98B714C2C196E9500AC15FE /* RestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantView.swift; sourceTree = "<group>"; };
+		A98B714E2C196F3900AC15FE /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		A98B71502C19728800AC15FE /* FoodOrderingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodOrderingView.swift; sourceTree = "<group>"; };
+		A98B71532C1979A800AC15FE /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		A98B71552C1979B100AC15FE /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
+		A98B715A2C197F7900AC15FE /* StepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperView.swift; sourceTree = "<group>"; };
+		A98B71612C19813400AC15FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A98B71632C19815C00AC15FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A98B71662C19838800AC15FE /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		A98B71682C1983A100AC15FE /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A98B71342C19670000AC15FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A98B716C2C1986EE00AC15FE /* Kingfisher in Frameworks */,
+				A98B715E2C19811000AC15FE /* FirebaseFirestore in Frameworks */,
+				A98B71602C19811000AC15FE /* FirebaseFirestoreSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A98B712E2C1966FF00AC15FE = {
+			isa = PBXGroup;
+			children = (
+				A98B71392C19670000AC15FE /* FancyFood */,
+				A98B71382C19670000AC15FE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A98B71382C19670000AC15FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A98B71372C19670000AC15FE /* FancyFood.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A98B71392C19670000AC15FE /* FancyFood */ = {
+			isa = PBXGroup;
+			children = (
+				A98B71652C19817700AC15FE /* Model */,
+				A98B71632C19815C00AC15FE /* GoogleService-Info.plist */,
+				A98B71572C197F4E00AC15FE /* Common */,
+				A98B71522C19799400AC15FE /* Cart */,
+				A98B714B2C196E8100AC15FE /* Restaurant Detail */,
+				A98B713A2C19670000AC15FE /* FancyFoodApp.swift */,
+				A98B71482C196C2500AC15FE /* Home */,
+				A98B713E2C19670100AC15FE /* Assets.xcassets */,
+				A98B71402C19670100AC15FE /* Preview Content */,
+				A98B71612C19813400AC15FE /* AppDelegate.swift */,
+			);
+			path = FancyFood;
+			sourceTree = "<group>";
+		};
+		A98B71402C19670100AC15FE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A98B71412C19670100AC15FE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A98B71482C196C2500AC15FE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A98B713C2C19670000AC15FE /* HomeView.swift */,
+				A98B71492C196C3600AC15FE /* RestaurantItemView.swift */,
+				A98B71662C19838800AC15FE /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A98B714B2C196E8100AC15FE /* Restaurant Detail */ = {
+			isa = PBXGroup;
+			children = (
+				A98B714C2C196E9500AC15FE /* RestaurantView.swift */,
+				A98B714E2C196F3900AC15FE /* ItemView.swift */,
+				A98B71502C19728800AC15FE /* FoodOrderingView.swift */,
+			);
+			path = "Restaurant Detail";
+			sourceTree = "<group>";
+		};
+		A98B71522C19799400AC15FE /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				A98B71532C1979A800AC15FE /* CartView.swift */,
+				A98B71552C1979B100AC15FE /* CartItem.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		A98B71572C197F4E00AC15FE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A98B715A2C197F7900AC15FE /* StepperView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A98B71652C19817700AC15FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A98B71682C1983A100AC15FE /* Restaurant.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A98B71362C19670000AC15FE /* FancyFood */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A98B71452C19670100AC15FE /* Build configuration list for PBXNativeTarget "FancyFood" */;
+			buildPhases = (
+				A98B71332C19670000AC15FE /* Sources */,
+				A98B71342C19670000AC15FE /* Frameworks */,
+				A98B71352C19670000AC15FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FancyFood;
+			packageProductDependencies = (
+				A98B715D2C19811000AC15FE /* FirebaseFirestore */,
+				A98B715F2C19811000AC15FE /* FirebaseFirestoreSwift */,
+				A98B716B2C1986EE00AC15FE /* Kingfisher */,
+			);
+			productName = FancyFood;
+			productReference = A98B71372C19670000AC15FE /* FancyFood.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A98B712F2C1966FF00AC15FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					A98B71362C19670000AC15FE = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = A98B71322C1966FF00AC15FE /* Build configuration list for PBXProject "FancyFood" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A98B712E2C1966FF00AC15FE;
+			packageReferences = (
+				A98B715C2C19811000AC15FE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				A98B716A2C1986EE00AC15FE /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
+			productRefGroup = A98B71382C19670000AC15FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A98B71362C19670000AC15FE /* FancyFood */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A98B71352C19670000AC15FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A98B71642C19815D00AC15FE /* GoogleService-Info.plist in Resources */,
+				A98B71422C19670100AC15FE /* Preview Assets.xcassets in Resources */,
+				A98B713F2C19670100AC15FE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A98B71332C19670000AC15FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A98B71512C19728800AC15FE /* FoodOrderingView.swift in Sources */,
+				A98B71672C19838800AC15FE /* HomeViewModel.swift in Sources */,
+				A98B71542C1979A800AC15FE /* CartView.swift in Sources */,
+				A98B71562C1979B100AC15FE /* CartItem.swift in Sources */,
+				A98B713D2C19670000AC15FE /* HomeView.swift in Sources */,
+				A98B715B2C197F7900AC15FE /* StepperView.swift in Sources */,
+				A98B714A2C196C3600AC15FE /* RestaurantItemView.swift in Sources */,
+				A98B713B2C19670000AC15FE /* FancyFoodApp.swift in Sources */,
+				A98B71692C1983A100AC15FE /* Restaurant.swift in Sources */,
+				A98B714F2C196F3900AC15FE /* ItemView.swift in Sources */,
+				A98B71622C19813400AC15FE /* AppDelegate.swift in Sources */,
+				A98B714D2C196E9500AC15FE /* RestaurantView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A98B71432C19670100AC15FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A98B71442C19670100AC15FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A98B71462C19670100AC15FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FancyFood/Preview Content\"";
+				DEVELOPMENT_TEAM = V3G3959732;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eldiiar.FancyFood;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A98B71472C19670100AC15FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FancyFood/Preview Content\"";
+				DEVELOPMENT_TEAM = V3G3959732;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eldiiar.FancyFood;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A98B71322C1966FF00AC15FE /* Build configuration list for PBXProject "FancyFood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A98B71432C19670100AC15FE /* Debug */,
+				A98B71442C19670100AC15FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A98B71452C19670100AC15FE /* Build configuration list for PBXNativeTarget "FancyFood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A98B71462C19670100AC15FE /* Debug */,
+				A98B71472C19670100AC15FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A98B715C2C19811000AC15FE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.27.0;
+			};
+		};
+		A98B716A2C1986EE00AC15FE /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A98B715D2C19811000AC15FE /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A98B715C2C19811000AC15FE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		A98B715F2C19811000AC15FE /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A98B715C2C19811000AC15FE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		A98B716B2C1986EE00AC15FE /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A98B716A2C1986EE00AC15FE /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A98B712F2C1966FF00AC15FE /* Project object */;
+}
