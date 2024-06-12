@@ -24,14 +24,26 @@ struct ItemView: View {
                 Text("Item description")
             }
             
-//            Spacer()
+            Spacer()
             
             VStack(alignment: .trailing) {
                 Text("\(product.price) KGS")
                     .font(.title2)
                 Spacer()
                 
-                StepperView(count: $count)
+                StepperView(count: $count) {
+                    CartManager.shared.addProductToCart(product: product, quantity: count, restaurantID: Storage.shared.getRestaurantID())
+                } onChange: {
+                    if let product = CartManager.shared.getProductByID(id: product.id ?? "") {
+                        if count == 0 {
+                            CartManager.shared.deleteProductFromCart(product: product)
+                        } else {
+                            CartManager.shared.updateProductQuantity(product: product, newQuantity: count)
+                        }
+                    }
+                    
+                    
+                }
             }
             
         }

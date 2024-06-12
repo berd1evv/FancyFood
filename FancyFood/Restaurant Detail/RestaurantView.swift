@@ -67,10 +67,18 @@ struct RestaurantView: View {
                     
                     LazyVGrid(columns: columns, spacing: 20) {
                         // Iterate over the data to populate the grid
-                        ForEach(0..<6, id: \.self) { index in
-                            RoundedRectangle(cornerRadius: 25)
-                                .fill(.gray)
-                                .frame(height: 140)
+                        ForEach(viewModel.categories, id: \.id) { item in
+                            ZStack(alignment: .bottomTrailing) {
+                                KFImage(URL(string: item.image))
+                                    .resizable()
+                                    .frame(height: 140)
+                                    .cornerRadius(25)
+                                
+                                Text(item.name)
+                                    .foregroundStyle(.black)
+                                    .font(.title)
+                            }
+                            
                         }
                     }
                     

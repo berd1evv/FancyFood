@@ -9,12 +9,15 @@ import SwiftUI
 
 struct StepperView: View {
     @Binding var count: Int
+    var onFirst: (()->())
+    var onChange: (()->())
     
     var body: some View {
         HStack {
             if count > 0 {
                 Button {
                     count -= 1
+                    onChange()
                 } label: {
                     Image(systemName: "minus")
                         .foregroundColor(.white)
@@ -26,7 +29,11 @@ struct StepperView: View {
             }
             
             Button {
+                if count == 0 {
+                    onFirst()
+                }
                 count += 1
+                onChange()
             } label: {
                 Image(systemName: "plus")
                     .foregroundColor(.white)
@@ -39,5 +46,9 @@ struct StepperView: View {
 }
 
 #Preview {
-    StepperView(count: .constant(0))
+    StepperView(count: .constant(0), onFirst: {
+        
+    }, onChange: {
+        
+    })
 }

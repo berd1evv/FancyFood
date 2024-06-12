@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct FoodOrderingView: View {
     @EnvironmentObject var viewModel: RestaurantViewModel
     @State private var showCart: Bool = false
+    @StateObject private var cartManager = CartManager.shared
     
     var body: some View {
         ScrollView {
@@ -38,21 +40,23 @@ struct FoodOrderingView: View {
                 Spacer()
                 HStack {
                     Spacer()
-                    Button {
-                        showCart = true
-                    } label: {
-                        HStack {
-                            Image(systemName: "cart")
-                                .foregroundStyle(.white)
-                            Text("450 KGS")
-                                .foregroundStyle(.white)
+                    if cartManager.getTotalSum() != 0 {
+                        Button {
+                            showCart = true
+                        } label: {
+                            HStack {
+                                Image(systemName: "cart")
+                                    .foregroundStyle(.white)
+                                Text("\(cartManager.getTotalSum()) KGS")
+                                    .foregroundStyle(.white)
+                            }
+                            .frame(width: 120, height: 40)
+                            .background(.blue)
+                            .cornerRadius(16)
+                            
                         }
-                        .frame(width: 120, height: 40)
-                        .background(.blue)
-                        .cornerRadius(16)
-                        
+                        .frame(alignment: .bottomTrailing)
                     }
-                    .frame(alignment: .bottomTrailing)
                 }
                 .padding()
                 

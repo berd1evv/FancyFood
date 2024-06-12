@@ -34,6 +34,7 @@ struct HomeView: View {
                         ForEach(filteredRestaurants, id: \.id) { item in
                             RestaurantItemView(restaurant: item)
                                 .onTapGesture {
+                                    Storage.shared.setRestaurantID(item.id)
                                     selectedRestaurant = item
                                     showRestaurant = true
                                 }
