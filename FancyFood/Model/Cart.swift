@@ -17,12 +17,18 @@ class Cart: Object {
     @Persisted var restaurantID: String
     
     init(_id: String, name: String, image: String, price: Int, count: Int, restaurantID: String) {
+        super.init()
         self._id = _id
         self.name = name
         self.image = image
         self.price = price
         self.count = count
         self.restaurantID = restaurantID
+    }
+    
+    // Required initializer for Realm
+    required override init() {
+        super.init()
     }
 }
 

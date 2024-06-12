@@ -6,35 +6,36 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct CartItem: View {
+    @EnvironmentObject var cartManager: CartManager
+    var cartItem: Cart
     @State private var count: Int = 0
     
     var body: some View {
         HStack(alignment: .top) {
-            RoundedRectangle(cornerRadius: 16)
-                .fill(.gray)
+            KFImage(URL(string: cartItem.image))
                 .frame(width: 80, height: 80)
+                .cornerRadius(16)
             
-            Text("Item")
+            Text(cartItem.name)
                 .font(.title2)
             
             Spacer()
             
             VStack(alignment: .trailing) {
-                Text("120 KGS")
+                Text("\(cartItem.price) KGS")
                     .font(.title2)
                 Spacer()
                 
                 StepperView(count: $count) {
-                    CartManager.shared.addProductToCart(product: product, quantity: count, restaurantID: Storage.shared.getRestaurantID())
+                    
                 } onChange: {
-                    if let product = CartManager.shared.getProductByID(id: product.id ?? "") {
-                        if count == 0 {
-                            CartManager.shared.deleteProductFromCart(product: product)
-                        } else {
-                            CartManager.shared.updateProductQuantity(product: product, newQuantity: count)
-                        }
+                    if count == 0 {
+                        CartManager.shared.deleteProductFromCart(product: cartItem)
+                    } else {
+                        CartManager.shared.updateProductQuantity(product: cartItem, newQuantity: count)
                     }
                 }
                 
@@ -42,10 +43,13 @@ struct CartItem: View {
             }
             
         }
+        .onAppear {
+            count = cartItem.count
+        }
         .padding(.vertical, 12)
     }
 }
 
-#Preview {
-    CartItem()
-}
+//#Preview {
+//    CartItem()
+//}

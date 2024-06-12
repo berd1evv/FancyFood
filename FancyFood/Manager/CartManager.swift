@@ -8,7 +8,9 @@
 import Foundation
 import RealmSwift
 
-class CartManager {
+class CartManager: ObservableObject {
+    
+    @Published var total: Int = 0
     
     static let shared = CartManager()
     
@@ -22,12 +24,13 @@ class CartManager {
         try! realm.write {
             realm.add(cartProduct)
         }
+        total = getTotalSum()
     }
     
-    func getTotalSum() -> Double {
+    func getTotalSum() -> Int {
         let realm = try! Realm()
         let products = realm.objects(Cart.self)
-        return products.reduce(0.0) { $0 + ($1.price * Double($1.quantity)) }
+        return products.reduce(0) { $0 + ($1.price * $1.count) }
     }
     
     func getProductByID(id: String) -> Cart? {
@@ -37,7 +40,7 @@ class CartManager {
     
     func getCartProducts() -> Results<Cart> {
         let realm = try! Realm()
-        return realm.objects(Cart.self).filter { $0.restaurantID == Storage.shared.getRestaurantID()}
+        return realm.objects(Cart.self).where { $0.restaurantID == Storage.shared.getRestaurantID() }
     }
     
     func updateProductQuantity(product: Cart, newQuantity: Int) {
@@ -45,6 +48,7 @@ class CartManager {
         try! realm.write {
             product.count = newQuantity
         }
+        total = getTotalSum()
     }
     
     func deleteProductFromCart(product: Cart) {
@@ -52,5 +56,15 @@ class CartManager {
         try! realm.write {
             realm.delete(product)
         }
+        total = getTotalSum()
     }
+    
+    func deleteAll() {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.deleteAll()
+        }
+        total = getTotalSum()
+    }
+    
 }

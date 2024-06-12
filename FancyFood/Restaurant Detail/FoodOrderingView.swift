@@ -25,6 +25,7 @@ struct FoodOrderingView: View {
                 if let products = viewModel.categoryProducts[item.id ?? ""] {
                     ForEach(products) { product in
                         ItemView(product: product)
+                            .environmentObject(cartManager)
                     }
                 } else {
                     Text("Loading products...")
@@ -40,14 +41,14 @@ struct FoodOrderingView: View {
                 Spacer()
                 HStack {
                     Spacer()
-                    if cartManager.getTotalSum() != 0 {
+                    if cartManager.total != 0 {
                         Button {
                             showCart = true
                         } label: {
                             HStack {
                                 Image(systemName: "cart")
                                     .foregroundStyle(.white)
-                                Text("\(cartManager.getTotalSum()) KGS")
+                                Text("\(cartManager.total) KGS")
                                     .foregroundStyle(.white)
                             }
                             .frame(width: 120, height: 40)

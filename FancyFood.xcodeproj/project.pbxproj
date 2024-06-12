@@ -33,6 +33,12 @@
 		A98B717E2C199CDB00AC15FE /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98B717D2C199CDB00AC15FE /* CartManager.swift */; };
 		A98B71802C19A2A900AC15FE /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98B717F2C19A2A900AC15FE /* Storage.swift */; };
 		A98B71882C19A5C900AC15FE /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A98B71872C19A5C900AC15FE /* RealmSwift */; };
+		A98B71902C19B19700AC15FE /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = A98B718A2C19B19600AC15FE /* 1.png */; };
+		A98B71912C19B19700AC15FE /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = A98B718B2C19B19700AC15FE /* 3.png */; };
+		A98B71922C19B19700AC15FE /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = A98B718C2C19B19700AC15FE /* 2.png */; };
+		A98B71932C19B19700AC15FE /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = A98B718D2C19B19700AC15FE /* 4.png */; };
+		A98B71942C19B19700AC15FE /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = A98B718E2C19B19700AC15FE /* 5.png */; };
+		A98B71952C19B19700AC15FE /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = A98B718F2C19B19700AC15FE /* 6.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +65,12 @@
 		A98B717A2C199B6D00AC15FE /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		A98B717D2C199CDB00AC15FE /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
 		A98B717F2C19A2A900AC15FE /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		A98B718A2C19B19600AC15FE /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		A98B718B2C19B19700AC15FE /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		A98B718C2C19B19700AC15FE /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		A98B718D2C19B19700AC15FE /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		A98B718E2C19B19700AC15FE /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		A98B718F2C19B19700AC15FE /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +107,7 @@
 		A98B71392C19670000AC15FE /* FancyFood */ = {
 			isa = PBXGroup;
 			children = (
+				A98B71892C19B16D00AC15FE /* screenshots */,
 				A98B717C2C199CCC00AC15FE /* Manager */,
 				A98B71652C19817700AC15FE /* Model */,
 				A98B71632C19815C00AC15FE /* GoogleService-Info.plist */,
@@ -177,6 +190,19 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		A98B71892C19B16D00AC15FE /* screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				A98B718A2C19B19600AC15FE /* 1.png */,
+				A98B718C2C19B19700AC15FE /* 2.png */,
+				A98B718B2C19B19700AC15FE /* 3.png */,
+				A98B718D2C19B19700AC15FE /* 4.png */,
+				A98B718E2C19B19700AC15FE /* 5.png */,
+				A98B718F2C19B19700AC15FE /* 6.png */,
+			);
+			path = screenshots;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -246,7 +272,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A98B71922C19B19700AC15FE /* 2.png in Resources */,
+				A98B71932C19B19700AC15FE /* 4.png in Resources */,
+				A98B71912C19B19700AC15FE /* 3.png in Resources */,
+				A98B71952C19B19700AC15FE /* 6.png in Resources */,
 				A98B71642C19815D00AC15FE /* GoogleService-Info.plist in Resources */,
+				A98B71902C19B19700AC15FE /* 1.png in Resources */,
+				A98B71942C19B19700AC15FE /* 5.png in Resources */,
 				A98B71422C19670100AC15FE /* Preview Assets.xcassets in Resources */,
 				A98B713F2C19670100AC15FE /* Assets.xcassets in Resources */,
 			);

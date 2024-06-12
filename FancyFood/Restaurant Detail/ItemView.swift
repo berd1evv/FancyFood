@@ -6,17 +6,18 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ItemView: View {
+    @EnvironmentObject var cartManager: CartManager
     var product: Meal
     @State private var count: Int = 0
     
     var body: some View {
         HStack(alignment: .top) {
-            RoundedRectangle(cornerRadius: 25)
-                .fill(.gray)
+            KFImage(URL(string: product.image))
                 .frame(width: 120, height: 120)
-            
+                .cornerRadius(25)
             
             VStack(alignment: .leading) {
                 Text(product.name)
@@ -32,13 +33,13 @@ struct ItemView: View {
                 Spacer()
                 
                 StepperView(count: $count) {
-                    CartManager.shared.addProductToCart(product: product, quantity: count, restaurantID: Storage.shared.getRestaurantID())
+                    cartManager.addProductToCart(product: product, quantity: count, restaurantID: Storage.shared.getRestaurantID())
                 } onChange: {
-                    if let product = CartManager.shared.getProductByID(id: product.id ?? "") {
+                    if let product = cartManager.getProductByID(id: product.id ?? "") {
                         if count == 0 {
-                            CartManager.shared.deleteProductFromCart(product: product)
+                            cartManager.deleteProductFromCart(product: product)
                         } else {
-                            CartManager.shared.updateProductQuantity(product: product, newQuantity: count)
+                            cartManager.updateProductQuantity(product: product, newQuantity: count)
                         }
                     }
                     
@@ -46,6 +47,12 @@ struct ItemView: View {
                 }
             }
             
+        }
+        .onAppear {
+            if let product = cartManager.getProductByID(id: product.id ?? "") {
+                count = product.count
+                cartManager.total = cartManager.getTotalSum()
+            }
         }
         .padding(.vertical, 12)
     }
