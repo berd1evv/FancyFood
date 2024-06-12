@@ -29,11 +29,10 @@
 		A98B71702C198FD500AC15FE /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98B716F2C198FD500AC15FE /* Category.swift */; };
 		A98B71722C19900F00AC15FE /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98B71712C19900F00AC15FE /* Meal.swift */; };
 		A98B71742C19912800AC15FE /* RestaurantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98B71732C19912800AC15FE /* RestaurantViewModel.swift */; };
-		A98B71772C199B3400AC15FE /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = A98B71762C199B3400AC15FE /* Realm */; };
-		A98B71792C199B3400AC15FE /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A98B71782C199B3400AC15FE /* RealmSwift */; };
 		A98B717B2C199B6D00AC15FE /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98B717A2C199B6D00AC15FE /* Cart.swift */; };
 		A98B717E2C199CDB00AC15FE /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98B717D2C199CDB00AC15FE /* CartManager.swift */; };
 		A98B71802C19A2A900AC15FE /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98B717F2C19A2A900AC15FE /* Storage.swift */; };
+		A98B71882C19A5C900AC15FE /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A98B71872C19A5C900AC15FE /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,10 +66,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A98B71882C19A5C900AC15FE /* RealmSwift in Frameworks */,
 				A98B716C2C1986EE00AC15FE /* Kingfisher in Frameworks */,
 				A98B715E2C19811000AC15FE /* FirebaseFirestore in Frameworks */,
-				A98B71772C199B3400AC15FE /* Realm in Frameworks */,
-				A98B71792C199B3400AC15FE /* RealmSwift in Frameworks */,
 				A98B71602C19811000AC15FE /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,8 +197,7 @@
 				A98B715D2C19811000AC15FE /* FirebaseFirestore */,
 				A98B715F2C19811000AC15FE /* FirebaseFirestoreSwift */,
 				A98B716B2C1986EE00AC15FE /* Kingfisher */,
-				A98B71762C199B3400AC15FE /* Realm */,
-				A98B71782C199B3400AC15FE /* RealmSwift */,
+				A98B71872C19A5C900AC15FE /* RealmSwift */,
 			);
 			productName = FancyFood;
 			productReference = A98B71372C19670000AC15FE /* FancyFood.app */;
@@ -233,7 +230,7 @@
 			packageReferences = (
 				A98B715C2C19811000AC15FE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				A98B716A2C1986EE00AC15FE /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				A98B71752C199B3400AC15FE /* XCRemoteSwiftPackageReference "realm-swift" */,
+				A98B71862C19A5C900AC15FE /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = A98B71382C19670000AC15FE /* Products */;
 			projectDirPath = "";
@@ -504,7 +501,7 @@
 				minimumVersion = 7.12.0;
 			};
 		};
-		A98B71752C199B3400AC15FE /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+		A98B71862C19A5C900AC15FE /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
 			requirement = {
@@ -530,14 +527,9 @@
 			package = A98B716A2C1986EE00AC15FE /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
-		A98B71762C199B3400AC15FE /* Realm */ = {
+		A98B71872C19A5C900AC15FE /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A98B71752C199B3400AC15FE /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = Realm;
-		};
-		A98B71782C199B3400AC15FE /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A98B71752C199B3400AC15FE /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = A98B71862C19A5C900AC15FE /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
